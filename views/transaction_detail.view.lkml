@@ -1,12 +1,5 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
-explore: transaction_detail {
-  hidden: yes
-    join: transaction_detail__items {
-      view_label: "Transaction Detail: Items"
-      sql: LEFT JOIN UNNEST(${transaction_detail.items}) as transaction_detail__items ;;
-      relationship: one_to_many
-    }
-}
+
 view: transaction_detail {
   sql_table_name: `dwtestproject-384412.ecomm_ck.transaction_detail` ;;
 
